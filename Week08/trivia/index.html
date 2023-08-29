@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checker(correct, element) {
+                if (correct) {
+                    document.getElementById(element).innerHTML = "Correct!";
+                    document.getElementById(element).style.color = 'green';
+                } else {
+                    document.getElementById(element).innerHTML = "Inorrect!";
+                    document.getElementById(element).style.color = 'red';
+                }
+            }
+
+            function resetButton() {
+                var buttons = document.querySelectorAll(".button")
+                buttons.forEach(function(button) {
+                    button.classList.remove('incorrect')
+                    button.classList.remove('correct')
+                })
+            }
+
+            function getAnswer() {
+                resetButton()
+                if (event.target.id == "correct") {
+                    event.target.classList.add('correct')
+                    checker(true, "response")
+                } else {
+                    event.target.classList.add('incorrect')
+                    checker(false, "response")
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function(event) {
+                var buttons = document.querySelectorAll(".button")
+                buttons.forEach(function(button) {
+                    button.addEventListener("click", getAnswer)
+                })
+
+                answer = document.querySelector('input')
+                checkBtn = document.querySelector('#check')
+                checkBtn.addEventListener('click', function(event) {
+                    if (answer.value.toLowerCase() != "male ladybug") {
+                        checker(false, "free-response")
+                    } else {
+                        checker(true, "free-response")
+                    }
+                })
+            })
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>If animals could talk, which species would be the rudest of them all?</h3>
+                <h3 id="response"></h3>
+                <button class="button">Dogs</button>
+                <button id="correct" class="button">Cats</button>
+                <button class="button">Elephant</button>
+                <button class="button">Donkey</button>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What do you call a male ladybug?</h3>
+                <h3 id="free-response"></h3>
+                <input type="text">
+                <button id="check" class="input">Check!</button>
+            </div>
+        </div>
+    </body>
+
+</html>

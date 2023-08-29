@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+
+#nav,
+#main,
+header #comm,
+#about,
+.row,
+#works,
+#contact,
+#contact #contact-comm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #2a3a32;
+    font-family: 'Caveat', cursive;
+}
+
+
+header {
+    background-color: #4f665b;
+    box-shadow: inset 0 0 100px 15px #293a32;
+}
+
+
+
+/*nav bar*/
+#nav {
+    padding: 25px 60px;
+    justify-content: space-between;
+}
+
+#logo { width: 100px; height: 100px; }
+
+.link {
+    font-weight: 400;
+    font-size: 22px;
+
+    color: #1c2825;
+    margin: 20px;
+    text-decoration: none;
+}
+
+.link:hover { color: #707061; }
+
+#selected { color: #b5a78d; font-weight: 600; }
+
+
+
+/*name and pic*/
+#main { margin-top: -150px; }
+
+#name {
+    font-weight: 600;
+    font-size: 90px;
+
+    color: #E3D1BC;
+    z-index: 2;
+    margin-right: -130px;
+}
+
+#profile {
+    z-index: 1;
+    margin-left: -130px;
+
+    transform: scale(0.5, 0.5);
+
+    border-radius: 50% 50% 0 0;
+    border: 10px solid #b5a78d;
+}
+
+
+
+/* communication */
+header #comm a {
+    margin: 20px;
+    margin-top: 0;
+}
+header #comm a svg {
+    height: 1em;
+}
+
+a svg { fill: #b5a78d; }
+a svg:hover { fill: #707061; }
+
+
+/* --------------------------------------------- */
+
+/* Who Am I? */
+#about {
+    color: #EDDBC5;
+    padding: 100px;
+}
+    #about div { width: 400px; }
+        #about div h2 { font-size: 40px; }
+        #about div p { font-size: 21px; }
+        #about img {
+            border-radius: 50%;
+            border: 5px solid #b5a78d;
+
+            width: 350px;
+            height: 350px;
+        }
+
+
+/* --------------------------------------------- */
+
+/* Works */
+#works {
+    background-color: #4F665B;
+    padding: 100px 0;
+
+    flex-direction: column;
+}
+    #works h2 { color: #EDDBC5; font-size: 40px; }
+    .row {
+        margin-bottom: 30px;
+        align-items: end;
+    }
+        .row1 img { width: auto; height: 210px; }
+            #middle {
+                border-radius: 50% 50% 0 0;
+                height: 315px;
+            }
+
+        .row2 img { width: auto; height: 328px; }
+
+        .row3 img { width: auto; height: 345px; }
+
+    #works button {
+        background-color: #3E554B;
+        border: 1px solid #273835;
+
+        margin-top: 20px;
+        padding: 10px 20px;
+    }
+
+
+/* --------------------------------------------- */
+
+/* communication */
+#contact {
+    flex-direction: column;
+    text-align: center;
+    margin: 100px 0;
+}
+    #contact h2 { color: #EDDBC5; font-size: 40px; }
+
+    #contact #contact-comm div { margin: 25px 60px; }
+        #contact-comm div a { margin: 20px; margin-top: 0; }
+            #contact-comm div a svg { height: 4em; }
+        #contact-comm div h5 {
+            color: #b5a78d;
+            text-align: center;
+            margin-top: 25px;
+        }
