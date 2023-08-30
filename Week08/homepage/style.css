@@ -152,7 +152,59 @@ a svg:hover { fill: #707061; }
         #contact-comm div a { margin: 20px; margin-top: 0; }
             #contact-comm div a svg { height: 4em; }
         #contact-comm div h5 {
+            font-size: 25px;
             color: #b5a78d;
             text-align: center;
             margin-top: 25px;
         }
+
+
+
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+
+/* mobile */
+@media (max-width: 1000px) {
+    h2 { font-size: 45px; }
+
+    /*nav bar*/
+    #logo { width: 170px; height: 170px; }
+    .link { font-size: 33px; margin: 27px; }
+
+    /*name and pic*/
+    #name { margin-left: 225px; }
+    #profile { margin-right: 75px; }
+
+    /* communication */
+    header #comm a { margin: 40px; margin-top: 0; }
+        header #comm a svg { height: 2em; }
+
+
+    /* --------------------- */
+
+
+    /* Who Am I? */
+    #about { flex-direction: column; }
+        #about div { width: 500px; }
+            #about div p { font-size: 27px; }
+
+    /* Works */
+    #works { padding-right: 45px; padding-left: 45px; }
+            .row {
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+
+            }
+                .row1 img { height: 160px;  }
+                    #middle { height: 265px; }
+                .row2 img { height: 265px; }
+                .row3 img { height: 265px; }
+
+    /* communication */
+    #contact #contact-comm div { margin: 25px 30px; }
+        #contact-comm div a { margin: 10px; margin-top: 0; }
+            #contact-comm div a svg { height: 3em; }
+        #contact-comm div h5 { font-size: 30px; }
+  }
