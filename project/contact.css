@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+
+* { transition: all .2s ease-in-out; }
+
+header::after { 
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #726c5e84;
+}
+header .orange { z-index: 1;}
+
+
+.cont {
+    height: 100%;
+    margin: 0 40px 10px;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px;
+    
+    font-family: 'Fraunces', serif;
+    font-size: 23px;
+    color: #2c7566;
+}
+    h3:hover {
+        color: #a6eddf;
+        text-shadow: -3px 2px 4px #253a36bb,
+                    3px -2px 4px #253a36bb;
+    }
+    
+.cont img {
+    cursor: pointer;
+    width: 35px;
+    margin: 10px;
+}
+    h3:hover img { transform: scale(0); }
+
+
+.cont::before,
+.cont::after {
+    content: '';
+    position: absolute;
+    
+    z-index: -10;
+    border-radius: 50%;
+}
+    .cont::before {
+        margin-top: 150px;
+        left: 200px;
+        width: 500px;
+        height: 500px;
+        background-color: #a6eddf;
+    }
+    .cont::after {
+        left: 450px;
+        width: 520px;
+        height: 520px;
+        border: 2px solid #6f9d93;
+    }
+
+
+@media (max-width: 375px) {
+    .cont { margin: -15px 40px -5px; }
+    .cont::before {
+        margin-top: 120px;
+        width: 460px;
+        height: 460px;
+    }
+    .cont::after {
+        left: 30px;
+        margin-top: -55px;
+
+        width: 480px;
+        height: 480px;
+    }
+}

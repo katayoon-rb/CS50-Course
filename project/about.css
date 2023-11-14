@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+
+* { transition: all .2s ease-in-out; }
+
+header::after { 
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #726c5e84;
+}
+header .orange { z-index: 1;}
+
+
+main {
+    height: 100%;
+    position: relative;
+
+    background-color: #e2d7bd;
+    box-shadow: 0 0 10px #726c5e;
+}
+    .title {
+        z-index: 5;
+        font-family: 'Fraunces', serif;
+        font-size: 80px;
+        color: #fc6100;
+        transform: translate(-50%, -50%) rotate(-90deg);
+
+        position: absolute;
+        top: 34%;
+        left: 10%;
+    }
+        .title:hover {
+            background-color: #b8b09ba8;
+            padding: 20px;
+            border-bottom: 3px solid #fc6100;
+            transform: translate(-50%, -50%) rotate(0deg);
+            left: 20%;
+        }
+
+    .text {
+        position: absolute;
+        top: 10%;
+        left: 22%;
+
+        padding: 30px 20px;
+        width: 30%;
+        text-align: justify;
+    }
+        .text .text-title {
+            font-family: 'Fraunces', serif;
+            font-size: 27px;
+            font-weight: bold;
+            color: #23303e;
+
+            margin-bottom: 10px;
+        }
+        .text .text-content { color: #8e90a2; }
+
+        .text:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px #726c5ea1;
+        }
+
+
+    
+    .orange-con {
+        background-color: #ffc817;
+        height: fit-content;
+        width: 30%;
+
+        position: absolute;
+        right: 8%;
+        top: 18%;
+
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+    }
+        .orange-con .text-content {
+            color: #4b4b4b;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.5;
+
+            padding: 75px 60px;
+            text-align: justify;
+        }
+    
+        .orange-con:hover {
+            transform: translateY(-25px) scale(1.02);
+        }
+
+    
+
+@media (max-width: 375px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+        .title {
+            font-size: 50px;
+            transform: translate(0);
+
+            position: static;
+            margin: 50px auto 20px;
+            border-bottom: 3px solid #fc6100;
+        }
+
+        .text {
+            position: static;
+            width: 80%;
+            margin: 15px auto 0;
+        }
+
+        .orange-con {
+            width: 75%;
+            position: static;
+            margin: 25px auto -20px;
+        }
+            .orange-con .text-content {
+                font-size: 16px;
+                padding: 35px 20px;
+            }
+}
